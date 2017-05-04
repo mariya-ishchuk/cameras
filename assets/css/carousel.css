@@ -1,0 +1,113 @@
+.carousel-container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+}
+
+/*
+This is the visible area of you carousel.
+Set a width here to define how much items are visible.
+The width can be either fixed in px or flexible in %.
+Position must be relative!
+*/
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+}
+
+/*
+This is the container of the carousel items.
+You must ensure that the position is relative or absolute and
+that the width is big enough to contain all items.
+*/
+.jcarousel ul {
+    width: 20000em;
+    position: relative;
+
+    /* Optional, required in this case since it's a  element */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+These are the item elements. jCarousel works best, if the items
+have a fixed width and height (but it's not required).
+*/
+.jcarousel li {
+    width: 500px;
+    /* Required only for block elements like 's */
+    float: left;
+}
+
+.carousel-img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-paginators {
+    width: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin: 50px 0 50px 0;
+}
+
+.carousel-paginator {
+    width: 10px;
+    height: 10px;
+    position: relative;
+    border-radius: 50%;
+    border: 1px solid #666666;
+    cursor: pointer;
+    margin: 8px;
+}
+
+.carousel-paginator.active {
+    background-color: #666666;
+}
+
+@media (min-width: 320px) {
+  .jcarousel , .jcarousel  li {
+    width: 150px;
+  }
+}
+
+@media (min-width: 480px) {
+  .jcarousel , .jcarousel  li {
+    width: 290px;
+  }
+}
+
+@media (min-width: 768px) {
+  .jcarousel , .jcarousel  li {
+    width: 470px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .jcarousel , .jcarousel  li {
+    width: 600px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .jcarousel , .jcarousel  li {
+    width: 800px;
+  }
+}
